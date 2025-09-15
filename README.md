@@ -24,14 +24,14 @@ A minimal and flexible **NGINX setup using Docker Compose**. Supports SSL, virtu
 │   └── error.log
 
 
-⚙️ **How It Works**
+⚙️ How It Works
 * NGINX is deployed in a Docker container.
 * Uses conf.d/ for custom server blocks (virtual hosts).
 * SSL-ready via mounted certs in ssl/.
 * All static content/projects go under html/.
 * Logs are saved in logs/.
 
-🧾 **Sample Configuration (conf.d/default.conf)**
+🧾 Sample Configuration (conf.d/default.conf)
 server {
     listen 80;
     server_name localhost;
@@ -48,7 +48,7 @@ server {
 }
 
 
-🛠️ **How to Use**
+🛠️ How to Use
 1. Clone the repo
 git clone https://github.com/yourusername/docker-nginx-setup.git
 cd docker-nginx-setup
@@ -68,11 +68,11 @@ docker-compose up -d
 docker logs nginx
 
 
-📍 **Notes**
+📍 Notes
 You can add multiple server blocks for different domains in the conf.d/ directory.
 The monitoring_network is a named Docker bridge network; you can attach other containers (like apps or monitoring tools) to this for integration.
 
-🧪 **Tested On**
+🧪 Tested On
 Docker: 24+
 Docker Compose: v2+
 NGINX: latest
