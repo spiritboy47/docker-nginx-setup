@@ -1,0 +1,22 @@
+#version: '3.8'
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d
+      - ./ssl:/etc/ssl/certs
+      - ./html:/var/www/html
+      - ./logs:/var/log/nginx
+    environment:
+      - TZ=Asia/Kolkata
+    networks:
+      - monitoring_network
+
+networks:
+  monitoring_network:
+    driver: bridge
