@@ -50,7 +50,7 @@ server {
 
 🛠️ How to Use
 1. Clone the repo
-git clone https://github.com/yourusername/docker-nginx-setup.git
+git clone https://github.com/spiritboy47/docker-nginx-setup.git
 cd docker-nginx-setup
 
 2. Add your project(s)
